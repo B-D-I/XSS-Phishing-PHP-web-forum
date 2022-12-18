@@ -1,0 +1,52 @@
+
+CREATE TABLE `tbl_notifications` (
+  `Notice_ID` int(11) NOT NULL,
+  `Notice_Text` varchar(250) NOT NULL,
+  `User_Email` varchar(100) NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `tbl_notifications` (`Notice_ID`, `Notice_Text`, `User_Email`, `Date`) VALUES
+(1, 'electricity will be off from 10:00', 'admin@email.com', '2022-10-26 10:06:58'),
+(2, 'found a wallet on north street', 'admin@email.com', '2022-10-26 10:07:04'),
+(3,  'car has been stolen on south street', 'admin@email.com', '2022-10-26 10:07:11'),
+(4, 'new shop opening today', 'admin@email.com', '2022-10-19 17:05:14'),
+(5, 'old shop is closing down tomorrow', 'admin@email.com', '2022-10-19 17:05:17');
+
+
+CREATE TABLE `tbl_user_account` (
+  `User_ID` int(11) NOT NULL,
+  `Password` varchar(250) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `IsVerified` tinyint(4) DEFAULT NULL,
+  `Verification_Code` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+INSERT INTO `tbl_user_account` (`User_ID`, `Password`, `Email`, `IsVerified`, `Verification_Code`) VALUES
+(1, '!1Ppaaaaaa', 'nathan@email.com', 1, '4e1293771cba81ae'),
+(2, '!1Ppaaaaaa', 'hacker@email.com', 1, '97e7fd08f1483816');
+
+ALTER TABLE `tbl_notifications`
+  ADD PRIMARY KEY (`Notice_ID`);
+
+--
+-- Indexes for table `tbl_user_account`
+--
+ALTER TABLE `tbl_user_account`
+  ADD PRIMARY KEY (`User_ID`);
+
+--
+-- AUTO_INCREMENT for table `tbl_notifications`
+--
+ALTER TABLE `tbl_notifications`
+  MODIFY `Notice_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT for table `tbl_user_account`
+--
+ALTER TABLE `tbl_user_account`
+  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+

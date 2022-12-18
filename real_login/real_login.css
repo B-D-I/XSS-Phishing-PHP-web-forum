@@ -1,0 +1,32 @@
+body {
+    font-family: "Comfortaa", cursive;
+    margin: 0px;
+    background-color: #fddea4;
+}
+#navTitle{
+    font-family: "Comfortaa", cursive;
+    font-size: 90px;
+    color: #ab2c2c;
+    margin-left: 30pc;
+}
+
+.left-side{
+    margin-left: 5px;
+}
+/*the notifications section styling*/
+.notification-list{
+    padding: 20px;
+    background-color: #fddea4;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#reportTxt{
+    color: whitesmoke;
+    text-align: center;
+}
+.select{
+    width: 150px;
+}
+
