@@ -1,6 +1,8 @@
 
 Vulnerable forum application to demonstrate XSS-Phishing. 
 
+Video demonstration: https://youtu.be/_czHpNuJUzk 
+
 JavaScript can be submitted into forum ->
 ![image](https://user-images.githubusercontent.com/85758021/208474103-22db3a5b-5c16-49be-adf4-c6d7133d16e0.png)
 
